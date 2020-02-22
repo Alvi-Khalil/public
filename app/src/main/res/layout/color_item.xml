@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_con"
+    android:clickable="true">
+
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/name"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/circle_white"
+        android:tint="@color/grey"
+        android:padding="5dp"
+       />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/name"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/circle_white"
+        android:tint="@color/green"
+        android:padding="7dp"
+        android:id="@+id/image"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="11dp"
+        android:gravity="center"
+        android:text="Gixxer Sf"
+        android:fontFamily="@font/suzuki_pro_regular"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/grey"
+        android:id="@+id/v"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"/>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

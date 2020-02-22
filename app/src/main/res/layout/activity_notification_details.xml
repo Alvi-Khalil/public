@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivitiesInside.Activities.NotificationDetails">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Notification Details"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:padding="14dp"
+            android:src="@drawable/arrow_left"
+            android:tint="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/scroll">
+
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintDimensionRatio="300:200"
+                android:id="@+id/image"
+                android:scaleType="centerCrop"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/image"
+                android:background="@drawable/shadow_top_to_bottom2"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                app:layout_constraintTop_toBottomOf="@+id/image"
+                android:fontFamily="@font/suzuki_pro_headline"
+                android:text="New offer Available"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:textColor="@color/colorAccent"
+                android:layout_marginTop="10dp"
+                android:id="@+id/title"/>
+
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                android:fontFamily="@font/avenir_light"
+                android:text=""
+                android:gravity="center"
+                android:textSize="12dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorAccent3"
+                android:id="@+id/time"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                app:layout_constraintTop_toBottomOf="@+id/time"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="No Description Available!"
+                android:textSize="18dp"
+                android:fontFamily="@font/suzuki_pro_headline"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textColor="@color/colorAccent2"
+                android:id="@+id/no_des"
+                android:visibility="gone"
+                android:gravity="center"/>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/time"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/descrip_card"
+                app:cardCornerRadius="10dp"
+                android:visibility="visible">
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Description"
+                        android:fontFamily="@font/suzuki_pro_headline"
+                        android:textColor="@color/white"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:id="@+id/des"
+                        android:textSize="17dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintTop_toBottomOf="@+id/des"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/avenir_medium"
+                        android:text="hfwe vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h vcoii hjwijh vhhfwe vcoii h"
+                        android:textSize="12dp"
+                        android:textColor="@color/white"
+                        android:visibility="visible"
+                        android:id="@+id/description_text"/>
+
+
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/descrip_card"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

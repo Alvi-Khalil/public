@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Alvi Khalil on 10/24/18 11:32 AM
+  ~ Copyright (c) 2018 . All rights reserved.
+  ~ Last modified 10/15/18 12:38 PM
+  ~
+  -->
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<android.support.v4.widget.SwipeRefreshLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipe">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f9f9f9">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/bar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/home"
+                    android:textColor="@color/white"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/menu"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="15dp"
+                    android:src="@drawable/menu"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <!-- <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                app:layout_constraintTop_toBottomOf="@+id/bar"
+                android:overScrollMode="never">
+
+            </android.support.v4.view.ViewPager>-->
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/viewLo"
+                app:layout_constraintBottom_toBottomOf="@+id/viewLo"
+                app:layout_constraintRight_toRightOf="@+id/viewLo"
+                app:layout_constraintLeft_toLeftOf="@+id/viewLo"
+                android:id="@+id/bannar_progress"
+                android:visibility="gone"/>
+
+            <com.gigamole.infinitecycleviewpager.HorizontalInfiniteCycleViewPager
+                android:id="@+id/viewLo"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:icvp_center_page_scale_offset="0dp"
+                app:icvp_interpolator="@android:anim/accelerate_decelerate_interpolator"
+                app:icvp_max_page_scale="0.9"
+                app:icvp_medium_scaled="false"
+                app:icvp_min_page_scale="0.8"
+                app:icvp_min_page_scale_offset="-100dp"
+                app:icvp_scroll_duration="400"
+                app:layout_constraintDimensionRatio="300:200"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bar" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/points_card"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+               android:layout_margin="15dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/levelcard">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:src="@drawable/vd_vector"
+                        android:tint="#636363"
+                        android:id="@+id/redeem_ques"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="7dp"
+                        android:visibility="gone"
+                        />
+
+                    <TextView
+                        android:id="@+id/title_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/suzuki_pro_headline"
+                        android:text="@string/loyalty_program"
+                        android:textSize="15dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#d9d9d9"
+                        app:layout_constraintTop_toBottomOf="@+id/title_second" />
+
+
+                    <TextView
+                        android:id="@+id/points"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:fontFamily="@font/suzuki_pro_headline"
+                        android:text="00"
+                        android:textSize="34dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view2"
+                        android:visibility="gone"/>
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/suzuki_pro_regular"
+                        android:text="@string/points_remaining"
+                        android:textColor="#cecdcd"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/points"
+                        app:layout_constraintStart_toEndOf="@+id/points"
+                        android:visibility="gone"/>
+
+                    <Button
+                        android:id="@+id/redeem_btn"
+                        android:layout_width="170dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/bg_button"
+                        android:fontFamily="@font/suzuki_pro_regular"
+                        android:text="Redeem Loyalty Offers"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="12dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/view2" />
+
+
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/levelcard"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewLo"
+                android:visibility="gone">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:src="@drawable/vd_vector"
+                        android:tint="#636363"
+                        android:id="@+id/level_ques"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="7dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/level_of_biker_header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+
+                        android:fontFamily="@font/suzuki_pro_headline"
+                        android:text="Newbie Biker"
+                        android:textSize="34dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="(Lvl 1)"
+                        android:textColor="#cecdcd"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/level_of_biker_header"
+                        app:layout_constraintLeft_toRightOf="@+id/level_of_biker_header" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/suzuki_pro_regular"
+                        android:text="@string/_1500_points_to_go_to_become_probiker_lvl_3"
+                        android:textColor="#a1a0a0"
+                        android:textSize="13dp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="@+id/level_of_biker_header"
+                        app:layout_constraintTop_toBottomOf="@+id/level_of_biker_header" />
+
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <ProgressBar
+                            android:id="@+id/mf_progress_bar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:max="100"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/horizontal_progress_drawable"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/circle"
+                            android:padding="2.5dp"
+                            android:src="@drawable/star2"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="@id/guideline20"
+                            app:layout_constraintRight_toRightOf="@+id/guideline20"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:visibility="gone"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/circle"
+                            android:backgroundTint="#cbe8eae8"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="@id/guideline20"
+                            app:layout_constraintRight_toRightOf="@+id/guideline20"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/circle"
+                            android:padding="2.5dp"
+                            android:src="@drawable/star2"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="@id/guideline40"
+                            app:layout_constraintRight_toRightOf="@+id/guideline40"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:visibility="gone"/>
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/circle"
+                            android:backgroundTint="#cbe8eae8"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="@id/guideline40"
+                            app:layout_constraintRight_toRightOf="@+id/guideline40"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/circle"
+                            android:backgroundTint="#cbe8eae8"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="@id/guideline601"
+                            app:layout_constraintRight_toRightOf="@+id/guideline601"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/circle"
+                            android:backgroundTint="#cbe8eae8"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="@id/guideline801"
+                            app:layout_constraintRight_toRightOf="@+id/guideline801"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <android.support.constraint.Guideline
+                            android:id="@+id/guideline20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent=".2" />
+
+                        <android.support.constraint.Guideline
+                            android:id="@+id/guideline40"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent=".4" />
+
+                        <android.support.constraint.Guideline
+                            android:id="@+id/guideline601"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent=".6" />
+
+                        <android.support.constraint.Guideline
+                            android:id="@+id/guideline801"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent=".8" />
+                    </android.support.constraint.ConstraintLayout>
+
+
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/progressbars"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                app:layout_constraintTop_toBottomOf="@+id/points_card">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    app:layout_constraintEnd_toEndOf="@id/guideline50"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/free_card">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:id="@+id/free_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:fontFamily="@font/suzuki_pro_headline"
+                            android:text="FREE SERVICING"
+                            android:textSize="15dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent" />
+
+                        <ProgressBar
+                            android:id="@+id/free_service_progress_bar"
+
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+
+                            android:background="@drawable/circle_shape"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/circular_progress_bar"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/free_text" />
+
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="@+id/free_service_progress_bar"
+                            app:layout_constraintLeft_toLeftOf="@+id/free_service_progress_bar"
+                            app:layout_constraintRight_toRightOf="@+id/free_service_progress_bar"
+                            app:layout_constraintTop_toTopOf="@+id/free_service_progress_bar">
+
+                            <TextView
+                                android:id="@+id/free_percent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/suzuki_pro_regular"
+                                android:gravity="center"
+                                android:text="N/A"
+                                android:textSize="15dp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/suzuki_pro_regular"
+                                android:gravity="center"
+                                android:text="Complete"
+                                android:textSize="8dp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/free_percent"
+                                android:visibility="gone"
+                                android:id="@+id/com1"/>
+                        </android.support.constraint.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/free_remaining_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+
+                            android:fontFamily="@font/suzuki_pro_regular"
+                            android:text="Remaining : 0 / 0 "
+                            android:textSize="11dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideline50"
+                    android:id="@+id/paid_card">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/paid_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:fontFamily="@font/suzuki_pro_headline"
+                            android:text="PAID SERVICING"
+                            android:textSize="15dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent" />
+
+                        <ProgressBar
+                            android:id="@+id/paid_service_progress_bar"
+
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+
+                            android:background="@drawable/circle_shape"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/circular_progress_bar"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/paid_text" />
+
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="@+id/paid_service_progress_bar"
+                            app:layout_constraintLeft_toLeftOf="@+id/paid_service_progress_bar"
+                            app:layout_constraintRight_toRightOf="@+id/paid_service_progress_bar"
+                            app:layout_constraintTop_toTopOf="@+id/paid_service_progress_bar">
+
+                            <TextView
+                                android:id="@+id/paid_percent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/suzuki_pro_regular"
+                                android:gravity="center"
+                                android:text="N/A"
+                                android:textSize="15dp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/suzuki_pro_regular"
+                                android:gravity="center"
+                                android:text="Complete"
+                                android:textSize="8dp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/paid_percent"
+                                android:visibility="gone"
+                                android:id="@+id/com2"/>
+                        </android.support.constraint.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/paid_remaining_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+
+                            android:fontFamily="@font/suzuki_pro_regular"
+                            android:text="Remaining : 0 / 0 "
+                            android:textSize="11dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".5" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/schedule"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/progressbars"
+                >
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/upcoming_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/suzuki_pro_headline"
+                        android:text="@string/upcoming_services"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/upcoming_service">
+
+                        <TextView
+                            android:id="@+id/service_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/suzuki_pro_regular"
+                            android:text="Service Schdule is only available for Suzuki Bikers."
+                            android:textSize="12dp"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/suzuki_pro_regular"
+                            android:text="(10-10-2018 to 10-11-2-18)"
+                            android:textSize="12dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/service_name"
+                            app:layout_constraintLeft_toRightOf="@+id/service_name"
+                            android:visibility="gone"
+                            android:id="@+id/service_date"/>
+
+                    </android.support.constraint.ConstraintLayout>
+
+
+                    <Button
+                        android:id="@+id/schedule_button"
+                        android:layout_width="160dp"
+                        android:layout_height="35dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/bg_button"
+                        android:fontFamily="@font/suzuki_pro_regular"
+                        android:text="Add Chassis Number"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        />
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/tracker"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                app:layout_constraintTop_toBottomOf="@+id/schedule">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="2dp"
+                    app:layout_constraintEnd_toEndOf="@id/guideline501"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/ride_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv_ride_history"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/suzuki_pro_headline"
+                            android:text="Ride History"
+                            android:textSize="15dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/history"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_ride_history" />
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideline501">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/new_ride"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv_new_ride"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/suzuki_pro_headline"
+                            android:text="Start New Ride"
+
+                            android:textSize="15dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/new_ride"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_new_ride" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline501"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".5" />
+
+            </android.support.constraint.ConstraintLayout>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            app:layout_constraintTop_toBottomOf="@+id/tracker"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+
+           android:id="@+id/noti_card">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:src="@drawable/notification"
+                    android:tint="#636363"
+                    android:id="@+id/noti_tilt"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="10dp"
+                    />
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/noti_tilt"
+                    app:layout_constraintLeft_toLeftOf="@+id/noti_tilt"
+                    android:src="@drawable/circle_white"
+                    android:tint="@color/red"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="12dp"
+                    android:id="@+id/red_circle"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@+id/red_circle"
+                    app:layout_constraintBottom_toBottomOf="@+id/red_circle"
+                    app:layout_constraintLeft_toLeftOf="@+id/red_circle"
+                    app:layout_constraintRight_toRightOf="@+id/red_circle"
+                    android:text="10"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/suzuki_pro_headline"
+                    android:textSize="10dp"
+                    android:id="@+id/unseen_text"/>
+
+
+
+                <TextView
+                    android:id="@+id/title_second5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/suzuki_pro_headline"
+                    android:text="Notifications"
+                    android:textSize="18dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view25"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#d9d9d9"
+                    app:layout_constraintTop_toBottomOf="@+id/title_second5" />
+
+
+                <TextView
+                    android:id="@+id/points5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:fontFamily="@font/suzuki_pro_headline"
+                    android:text="You have 10 unseen notifications!"
+                    android:textSize="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view25" />
+
+
+                <Button
+                    android:id="@+id/allnoti"
+                    android:layout_width="75dp"
+                    android:layout_height="32dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/bg_button"
+                    android:fontFamily="@font/suzuki_pro_regular"
+                    android:text="See All"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/view25" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/noti_card"/>
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                app:layout_constraintTop_toBottomOf="@+id/tracker"
+                android:layout_marginTop="5dp"
+                android:visibility="gone">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:text="Latest Notifications"
+                            android:textAllCaps="true"
+                            android:fontFamily="@font/suzuki_pro_headline"
+                            android:textSize="18dp"
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:id="@+id/noti_header"/>
+                        <android.support.v7.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="8dp"
+                            app:layout_constraintTop_toBottomOf="@+id/noti_header"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginBottom="40dp"
+                            android:id="@+id/recycle_latest_noti">
+
+                        </android.support.v7.widget.RecyclerView>
+
+                        <Button
+                            android:id="@+id/allnoti2"
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_height="40dp"
+                            android:text="See All"
+                            android:textSize="14dp"
+                            android:textAllCaps="false"
+                            android:background="@drawable/bg_button"
+                            android:fontFamily="@font/suzuki_pro_headline"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:layout_marginBottom="10dp"/>
+
+                    </android.support.constraint.ConstraintLayout>
+
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guidelineVerMain5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".5" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>
+</android.support.constraint.ConstraintLayout>

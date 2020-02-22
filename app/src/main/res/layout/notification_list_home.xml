@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/bg_notification">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/notification"
+            android:tint="#636363"
+            android:padding="8dp"
+            android:layout_marginLeft="5dp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="45dp"
+            android:text="Notiheader"
+            android:fontFamily="@font/poppins_light"
+            android:textSize="10dp"
+            android:textColor="#636363"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/noti_title"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="45dp"
+            android:text="Noti bodyNoti bodyNoti bodyNoti bodyNoti bodyNoti bodyN"
+            android:fontFamily="@font/poppins_light"
+            android:textSize="8dp"
+            android:textColor="#636363"
+
+            app:layout_constraintTop_toBottomOf="@+id/noti_title"
+            android:id="@+id/noti_body"/>
+
+
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

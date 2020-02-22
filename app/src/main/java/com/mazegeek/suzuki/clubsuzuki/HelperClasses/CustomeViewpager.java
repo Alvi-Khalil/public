@@ -1,0 +1,100 @@
+/*
+ * Created by Alvi Khalil on 11/1/18 1:56 PM
+ * Copyright (c) 2018 . All rights reserved.
+ * Last modified 11/1/18 1:56 PM
+ *
+ */
+
+package com.mazegeek.suzuki.clubsuzuki.HelperClasses;
+
+import android.content.Context;
+import android.content.res.Resources;
+import android.support.v4.view.ViewPager;
+import android.util.AttributeSet;
+import android.util.TypedValue;
+import android.view.View;
+
+public class CustomeViewpager extends ViewPager implements ViewPager.PageTransformer {
+    public static final String TAG = "ViewPager";
+    private float MAX_SCALE = 0.0f;
+    private int mPageMarginLeft,mPageMarginTop,mPageMarginRight,mPageMarginBottom;
+    private boolean animationEnabled=true;
+    private boolean fadeEnabled=false;
+    private  float fadeFactor=0.5f;
+
+
+    public CustomeViewpager(Context context) {
+        this(context, null);
+    }
+
+    public CustomeViewpager(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        // clipping should be off on the pager for its children so that they can scale out of bounds.
+        setClipChildren(false);
+        setClipToPadding(false);
+        // to avoid fade effect at the end of the page
+        setOverScrollMode(2);
+        setPageTransformer(false, this);
+        setOffscreenPageLimit(3);
+        mPageMarginLeft = dp2px(context.getResources(), 70);
+        mPageMarginTop = dp2px(context.getResources(), 54);
+        mPageMarginRight = dp2px(context.getResources(), 70);
+        mPageMarginBottom = dp2px(context.getResources(), 40);
+
+        setPadding(mPageMarginLeft, mPageMarginTop, mPageMarginRight, mPageMarginBottom);
+    }
+
+    public int dp2px(Resources resource, int dp) {
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, resource.getDisplayMetrics());
+    }
+    public void setAnimationEnabled(boolean enable) {
+        this.animationEnabled = enable;
+    }
+
+    public void setFadeEnabled(boolean fadeEnabled) {
+        this.fadeEnabled = fadeEnabled;
+    }
+
+    public void setFadeFactor(float fadeFactor) {
+        this.fadeFactor = fadeFactor;
+    }
+
+    @Override
+    public void setPageMargin(int marginPixels) {
+       /* mPageMargin1 = marginPixels;
+        mPageMargin2 = marginPixels;
+        mPageMargin3 = marginPixels;
+        mPageMargin4 = marginPixels;*/
+        setPadding(mPageMarginLeft, mPageMarginTop, mPageMarginRight, mPageMarginBottom);
+    }
+
+    @Override
+    public void transformPage(View page, float position) {
+        if (mPageMarginLeft <= 0|| !animationEnabled)
+            return;
+        page.setPadding(mPageMarginLeft / 3, mPageMarginTop / 3, mPageMarginRight / 3, mPageMarginBottom / 3);
+
+        if (MAX_SCALE == 0.0f && position > 0.0f && position < 1.0f) {
+            MAX_SCALE = position;
+        }
+        position = position - MAX_SCALE;
+        float absolutePosition = Math.abs(position);
+        if (position <= -1.0f || position >= 1.0f) {
+            if(fadeEnabled)
+                page.setAlpha(fadeFactor);
+            // Page is not visible -- stop any running animations
+
+        } else if (position == 0.0f) {
+
+            // Page is selected -- reset any views if necessary
+            page.setScaleX((1 + MAX_SCALE));
+            page.setScaleY((1 + MAX_SCALE));
+            page.setAlpha(1);
+        } else {
+            page.setScaleX(1 + MAX_SCALE * (1 - absolutePosition));
+            page.setScaleY(1 + MAX_SCALE * (1 - absolutePosition));
+            if(fadeEnabled)
+                page.setAlpha( Math.max(fadeFactor, 1 - absolutePosition));
+        }
+    }
+}

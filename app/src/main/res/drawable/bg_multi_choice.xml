@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Alvi Khalil on 10/23/18 3:45 PM
+  ~ Copyright (c) 2018 . All rights reserved.
+  ~ Last modified 10/22/18 4:10 PM
+  ~
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="#dddddd"
+        android:endColor="#dddddd"
+        android:angle="270"
+        />
+    <corners
+        android:radius="4dp" />
+    <stroke
+        android:color="@color/colorAccent"
+        android:width="1dp"/>
+
+</shape>

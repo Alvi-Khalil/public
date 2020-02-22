@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Alvi Khalil on 10/26/18 8:44 AM
+  ~ Copyright (c) 2018 . All rights reserved.
+  ~ Last modified 10/22/18 4:10 PM
+  ~
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid
+        android:color="@color/white"/>
+    <corners
+        android:bottomRightRadius="5dp"
+        android:bottomLeftRadius="5dp"/>
+    <stroke
+        android:color="@color/colorAccent"
+        android:width="1dp"/>
+
+</shape>

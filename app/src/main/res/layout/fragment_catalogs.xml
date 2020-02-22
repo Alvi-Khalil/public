@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Alvi Khalil on 10/24/18 4:14 PM
+  ~ Copyright (c) 2018 . All rights reserved.
+  ~ Last modified 10/11/18 10:30 AM
+  ~
+  -->
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/bar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Products"
+                    android:textColor="@color/white"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/menu"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="15dp"
+                    android:src="@drawable/menu"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:layout_constraintTop_toBottomOf="@+id/bar"
+                android:background="#fff"
+                android:id="@+id/switchs">
+                <Button
+                    android:id="@+id/bikes"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/bg_button"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/bikes"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="@+id/guidelineVerMain5"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/bikes"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18dp"
+                    android:id="@+id/bikes_text"
+                    android:gravity="center"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="@+id/guidelineVerMain5"/>
+
+                <Button
+                    android:id="@+id/parts"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/bg_button"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/bike_parts"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/guidelineVerMain5"
+                    app:layout_constraintRight_toRightOf="@+id/guidelineVerMain6"
+                    android:visibility="gone"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/bike_parts"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18dp"
+                    android:id="@+id/parts_text"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/guidelineVerMain5"
+                    app:layout_constraintRight_toRightOf="@+id/guidelineVerMain6"/>
+
+
+                <Button
+                    android:id="@+id/oil"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/bg_button"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/oil"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/guidelineVerMain6"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:visibility="gone"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/oil"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18dp"
+                    android:id="@+id/oil_text"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/guidelineVerMain6"
+                    app:layout_constraintRight_toRightOf="parent"/>
+                <android.support.constraint.Guideline
+                    android:id="@+id/guidelineVerMain5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".5" /> <!--eta chaneg .33 -->
+                <android.support.constraint.Guideline
+                    android:id="@+id/guidelineVerMain6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".5" /> <!--eta chaneg .66 -->
+
+            </android.support.constraint.ConstraintLayout>
+
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@+id/switchs"
+                app:layout_constraintBottom_toBottomOf="parent"
+               >
+                <android.support.v4.view.ViewPager
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/pager">
+
+                </android.support.v4.view.ViewPager>
+
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/switchs"
+                android:id="@+id/shadow">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+
+                    android:background="@drawable/shadow_top_to_bottom2"/>
+            </android.support.constraint.ConstraintLayout>
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "549650826416",
+    "firebase_url": "https://club-suzuki.firebaseio.com",
+    "project_id": "club-suzuki",
+    "storage_bucket": "club-suzuki.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:549650826416:android:0e838cdc359a7a97",
+        "android_client_info": {
+          "package_name": "com.mazegeek.suzuki.clubsuzuki"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "549650826416-ks4lc86duf1v8iqk4g442uirdomeo199.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mazegeek.suzuki.clubsuzuki",
+            "certificate_hash": "e6f1dfac7e4c7bdcac7a8ab1e9a466dbe2348723"
+          }
+        },
+        {
+          "client_id": "549650826416-ae2fr14ld8ncbr3u0s7q1533uq2npppa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mazegeek.suzuki.clubsuzuki",
+            "certificate_hash": "0602013249ca79b03bfa280e124b43c3751e8da1"
+          }
+        },
+        {
+          "client_id": "549650826416-ndsnfuuuuitl1dh646i4hkjb67dun388.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCt7H7oSpevm4dZgJc58BA_20DAxEWV6oA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "549650826416-ndsnfuuuuitl1dh646i4hkjb67dun388.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Alvi Khalil on 10/22/18 4:12 PM
+  ~ Copyright (c) 2018 . All rights reserved.
+  ~ Last modified 10/22/18 4:12 PM
+  ~
+  -->
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_dialog"
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm Deletion"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+       android:layout_marginTop="10dp"
+        android:fontFamily="@font/avenir_medium"
+        android:textSize="19dp"
+        android:id="@+id/header"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Are you sure you want to delete this card from your Ride history?"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/avenir_light"
+        android:textSize="15dp"
+        android:gravity="left"
+        android:id="@+id/body"/>
+
+    <TextView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="Yes"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/body"
+        android:layout_marginRight="15dp"
+
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:fontFamily="@font/avenir_roman"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:id="@+id/yes"/>
+
+    <TextView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="No"
+
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/body"
+        android:layout_marginRight="30dp"
+
+        app:layout_constraintRight_toLeftOf="@+id/yes"
+        android:id="@+id/no"
+
+        android:fontFamily="@font/avenir_roman"
+        android:textSize="15dp"
+        android:gravity="center"/>
+
+
+</android.support.constraint.ConstraintLayout>

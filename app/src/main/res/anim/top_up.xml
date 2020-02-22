@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Alvi Khalil on 10/29/18 3:10 PM
+  ~ Copyright (c) 2018 . All rights reserved.
+  ~ Last modified 9/12/18 7:31 AM
+  ~
+  -->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android" android:interpolator="@android:anim/linear_interpolator">
+
+    <translate
+        android:fromYDelta="0%p"
+        android:toYDelta="-100%p"
+        android:fillAfter="true"
+        android:duration="900"/>
+</set>

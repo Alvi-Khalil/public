@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Alvi Khalil on 10/24/18 8:16 AM
+  ~ Copyright (c) 2018 . All rights reserved.
+  ~ Last modified 10/12/18 10:58 AM
+  ~
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item>
+        <shape>
+
+            <corners
+                android:radius="30dp" />
+
+        </shape>
+    </item>
+
+</selector>

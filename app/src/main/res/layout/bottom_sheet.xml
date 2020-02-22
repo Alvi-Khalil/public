@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f9f9f9"
+    android:clickable="true"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="50dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <TextView
+        android:id="@+id/edit_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/colorAccent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20dp"
+        android:visibility="gone"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/edit_item"
+        android:id="@+id/middle">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_editbox"
+            android:fontFamily="@font/avenir_light"
+
+            android:paddingLeft="14dp"
+
+            android:textSize="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/edit1"
+            android:visibility="gone"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_editbox"
+            android:fontFamily="@font/avenir_light"
+
+            android:paddingLeft="14dp"
+
+            android:textSize="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/edit1"
+            android:id="@+id/edit2"
+            android:visibility="gone"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_editbox"
+            android:fontFamily="@font/avenir_light"
+
+            android:paddingLeft="14dp"
+
+            android:textSize="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/edit2"
+            android:id="@+id/edit3"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            app:layout_constraintRight_toRightOf="@+id/edit1"
+            app:layout_constraintTop_toTopOf="@+id/edit1"
+            app:layout_constraintBottom_toBottomOf="@+id/edit1"
+            android:text="show"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/roboto_light"
+            android:id="@+id/show1"
+            android:visibility="gone"/>
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            app:layout_constraintRight_toRightOf="@+id/edit2"
+            app:layout_constraintTop_toTopOf="@+id/edit2"
+            app:layout_constraintBottom_toBottomOf="@+id/edit2"
+            android:text="show"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/roboto_light"
+            android:id="@+id/show2"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            app:layout_constraintRight_toRightOf="@+id/edit3"
+            app:layout_constraintTop_toTopOf="@+id/edit3"
+            app:layout_constraintBottom_toBottomOf="@+id/edit3"
+            android:text="show"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/roboto_light"
+            android:id="@+id/show3"
+            android:visibility="gone"/>
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            app:cardCornerRadius="5dp"
+            android:id="@+id/card_district"
+            android:visibility="gone">
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f7f7f7">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:src="@drawable/card_logo_lacation"
+                    android:padding="7dp"
+                    android:id="@+id/loaction_logo"/>
+
+                <AutoCompleteTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:hint="Set default district .."
+                    android:fontFamily="@font/avenir_medium"
+                    android:textStyle="bold"
+                    android:textSize="13dp"
+                    android:textColorHint="#450b2636"
+                    android:background="@null"
+                    app:layout_constraintLeft_toRightOf="@+id/loaction_logo"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/auto_com_text"
+                    android:completionThreshold="1"
+
+                    />
+
+
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/card_district"
+            android:id="@+id/v3"
+            android:visibility="gone"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        app:layout_constraintTop_toBottomOf="@+id/middle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/guideline10"
+        android:background="@drawable/bg_left_button"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="60dp"
+        android:id="@+id/left_btn"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:fontFamily="@font/avenir_medium"
+        android:textSize="12dp"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        app:layout_constraintTop_toBottomOf="@+id/middle"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline10"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/bg_right_button"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="60dp"
+        android:id="@+id/right_btn"
+        android:text="Update"
+        android:textAllCaps="false"
+        android:fontFamily="@font/avenir_medium"
+        android:textSize="12dp"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/middle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/bg_picture_button"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:id="@+id/camera_btn"
+        android:text="Take Picture"
+        android:textAllCaps="false"
+        android:fontFamily="@font/avenir_medium"
+        android:textSize="12dp"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/camera_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/bg_picture_button"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:id="@+id/gallery_btn"
+        android:text="Select from Gallery"
+        android:textAllCaps="false"
+        android:fontFamily="@font/avenir_medium"
+        android:textSize="12dp"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/right_btn"
+        android:id="@+id/v1"
+        android:visibility="gone"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/gallery_btn"
+        android:id="@id/v2"
+        android:visibility="gone"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
+
+
+</android.support.constraint.ConstraintLayout>

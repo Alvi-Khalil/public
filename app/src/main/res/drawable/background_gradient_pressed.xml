@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Alvi Khalil on 10/24/18 8:18 AM
+  ~ Copyright (c) 2018 . All rights reserved.
+  ~ Last modified 10/12/18 11:04 AM
+  ~
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item>
+        <shape>
+            <solid
+                android:color="#000"/>
+            <corners
+                android:bottomLeftRadius="30dp"
+                android:topLeftRadius="30dp" />
+
+        </shape>
+    </item>
+
+</selector>

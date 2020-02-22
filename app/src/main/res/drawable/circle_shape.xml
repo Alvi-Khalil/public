@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Alvi Khalil on 10/26/18 11:18 AM
+  ~ Copyright (c) 2018 . All rights reserved.
+  ~ Last modified 10/10/18 2:53 PM
+  ~
+  -->
+
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="ring"
+    android:innerRadiusRatio="2.5"
+    android:thickness="5dp"
+    android:useLevel="false">
+
+    <gradient
+        android:startColor="#77e8eae8"
+        android:endColor="#ff747674"
+        android:angle="270"
+        />
+
+</shape>

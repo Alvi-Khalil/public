@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Alvi Khalil on 11/7/18 2:32 PM
+  ~ Copyright (c) 2018 . All rights reserved.
+  ~ Last modified 10/26/18 8:48 AM
+  ~
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid
+        android:color="#efefef"/>
+    <corners
+        android:radius="10dp" />
+
+</shape>
